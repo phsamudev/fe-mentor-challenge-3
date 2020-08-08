@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+  --primary-cyan: hsl(180, 62%, 40%);
+  --primary-bright-yellow: hsl(71, 73%, 54%);
+
+  --neutral-light-gray: hsl(204, 43%, 93%);
+  --neutral-grayish-blue: hsl(218, 22%, 67%);
+
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+html, body{
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: var(--neutral-light-gray);
+  font-family: 'Karla', sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  box-shadow: 0 0 72px -18px var(--neutral-grayish-blue);
+  width: 60%;
+  overflow-y: auto;
+}
+
+section {
+  padding: 48px;
+}
+
+.summary {
+  width: 100%;
+}
+
+.summary h2 {
+  margin-bottom: 32px;
+  color: var(--primary-cyan);
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.summary h3 {
+  color: var(--primary-bright-yellow);
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+}
+
+.summary p {
+  color: var(--neutral-grayish-blue);
+  font-size: 1.2rem;
+  max-width: 90%;
+}
+
+.price {
+  color: var(--white);
+  background-color: hsl(180, 62%, 35%);;
+  flex: .5;
+}
+
+.price h2 {
+  font-size: 1.3rem;
+  letter-spacing: .9px;
+}
+
+.value-period {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin: 18px 0;
+}
+
+span.value {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+span.period {
+  margin-left: 14px;
+  font-size: 1.1rem;
+}
+
+.price p {
+  font-size: 1.2rem;
+  margin-bottom: 32px;
+}
+
+.price button {
+  width: 100%;
+  background-color: var(--primary-bright-yellow);
+  border: none;
+  border-radius: 4px;
+  padding: 18px 0;
+  font-size: 1.2rem;
+  color: var(--white);
+  box-shadow: 0 0 12px -6px #0000007a;
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
+}
+
+.price button:hover {
+  transform: translateY(2px) translateX(2px);
+}
+
+.about {
+  color: var(--white);
+  background-color: hsl(180, 62%, 40%);;
+  flex: .5;
+}
+
+.about h2 {
+  font-size: 1.3rem;
+  letter-spacing: .9px;
+  margin-bottom: 24px;
+}
+
+.about ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about li {
+  margin: 4px 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 12px;
+  left: calc(50% - 208px)
+}
+
+footer p {
+  margin: 0 auto;
+}
+
+@media (max-width: 780px) {
+  .card {
+    margin-top: 32px;
+    min-width: 375px;
+  }
+
+  .price {
+    flex: 1;
+  } 
+
+  .about {
+    flex: 1;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    position: initial;
+    margin: 12px auto;
+  }
+}
